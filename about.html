@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../kottu_paradise_logo.png" type ="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kottu Paradise | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="../kottu_paradise_logo.png" alt="logo" class="brand_logo">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="cart-btn" onclick="openCart()">
+            <h1>🛒 Cart <span id="cart-count">0</span></h1>
+        </button>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="about-header">
+        <div class="container">
+            <h1>Our Story</h1>
+        </div>
+    </header>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <img src="../resturant3.jpg" alt="Restaurant History">
+                <div class="story-text">
+                    <h2>From Street Food to Your Table</h2>
+                    <p>Founded in 1970, Kottu Paradise Restaurant began as a humble street food stall in the heart of Colombo. Our founder, inspired by the rich culinary traditions of Sri Lanka, set out to perfect the art of kottu making.</p>
+                    <p>Today, we continue to honor those traditions while bringing innovative twists to this beloved street food. Every chop, every spice, and every serving carries the same passion that started our journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Kottu Paradise, our mission is to deliver the authentic flavors of Sri Lankan kottu with a modern twist, offering a variety of delicious, fresh, and high-quality meals that cater to all taste buds. We aim to create a welcoming and vibrant dining experience, where every customer feels the warmth of our hospitality and the passion in our cooking. Whether it’s a classic favorite or a unique specialty, we strive to make every plate a journey of flavor and satisfaction.</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="../headchef.jpg" alt="James Laura">
+                    <h3>James Laura</h3>
+                    <p>Head Chef</p>
+                </div>
+                <div class="team-member">
+                    <img src="../manger.jpg" alt="Manager Tom">
+                    <h3>Tom Chen</h3>
+                    <p>Restaurant Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="../sor_chef.jpg" alt="Andraw Rachel">
+                    <h3>Andraw Rachel</h3>
+                    <p>Sous Chef</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 1970 Kottu Paradise. All rights reserved.</p>
+            <p><img src="../kottu_paradise_logo.png" alt="logo" class="logo_footer">
+                <a href="#" class="social-icon facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon whatsp"><i class="fa-brands fa-whatsapp"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

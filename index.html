@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../kottu_paradise/images/kottu_paradise_logo.png" sizes="20x20 40x40 55x55" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Kottu Paradise | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="../kottu_paradise//images/kottu_paradise_logo.png" alt="logo" class="brand_logo">
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="cart-btn" onclick="openCart()">
+           <h1>🛒 Cart <span id="cart-count">0</span></h1>
+        </button>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Discover the Real Taste of Sri Lankan Kottu</h1>
+            <p>Experience the perfect blend of flavors in every bite</p>
+            <a href="menu.html" class="cta-button">Go To Menu</a>
+        </div>
+    </header>
+
+
+    <section class="intro">
+        <div class="container">
+            <h2>Welcome to Kottu Paradise</h2>
+            <p>Welcome to a culinary journey that celebrates the vibrant flavors of Sri Lanka! At Kottu Paradise, 
+               we’re more than just a restaurant – we’re your gateway to the authentic taste of Sri Lankan food. Every dish we serve is crafted with the freshest ingredients, blended with bold, aromatic spices, and infused with the love and tradition of our rich heritage.
+               Whether you’re craving our signature kottu or looking to explore a world of unique flavors,
+                we’re here to make your dining experience unforgettable. Step into Kottu Paradise, where every bite is a celebration of taste, and every visit feels like home</p>
+        </div>
+    </section>   
+    <section class="featured-dishes">
+        <div class="container">
+            <center><h1>Featured Dishes</h1></center>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <img src="../kottu_paradise/images/chicken_kottu.jpg" alt="Chicken Kottu">
+                    <h3>Chicken Kottu</h3>
+                    <p>Classic kottu with tender chicken and fresh vegetables</p>
+                    <a href="menu.html" class="menu-link">View Menu</a>
+                </div>
+                <div class="dish-card">
+                    <img src="../kottu_paradise/images/cheese_kottu1.jpg" alt="Cheese Kottu">
+                    <h3>Cheese Kottu</h3>
+                    <p>Creamy cheese blended with traditional spices</p>
+                    <a href="menu.html" class="menu-link">View Menu</a>
+                </div>
+                <div class="dish-card">
+                    <img src="../kottu_paradise/images/mixed-kottu.jpg" alt="Mixed Kottu">
+                    <h3>Mixed Kottu</h3>
+                    <p>Experience the best of Kottu Roti with a savory mix of meats and spices in every bite</p>
+                    <a href="menu.html" class="menu-link">View Menu</a>
+                </div>
+                <div class="dish-card">
+                    <img src="../kottu_paradise/images/veg_kottu.jpg" alt="Vegetable Kottu">
+                    <h3>Vegetable Kottu</h3>
+                    <p>Our Vegetable Kottu Roti is a delicious, vegetarian take on a classic favorite</p>
+                    <a href="menu.html" class="menu-link">View Menu</a>
+                </div>
+                <div class="dish-card">
+                    <img src="../kottu_paradise/images/beef_kottu.jpg" alt="Beef Kottu">
+                    <h3>Beef Kottu</h3>
+                    <p>Our Beef Kottu combines tender beef and spices for an unforgettable taste experience</p>
+                    <a href="menu.html" class="menu-link">View Menu</a>
+                </div>
+                <div class="dish-card">
+                    <img src="../kottu_paradise/images/prawns_kottu.jpg" alt="Prawns Kottu">
+                    <h3>Prawns Kottu</h3>
+                    <p>For seafood lovers, our Prawns Kottu is a flavorful treat you won’t want to miss</p>
+                    <a href="menu.html" class="menu-link">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 1970 Kottu Paradise. All rights reserved.</p>
+            <p><img src="../kottu_paradise/images/kottu_paradise_logo.png" alt="logo" class="logo_footer">
+                <a href="#" class="social-icon facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon whatsp"><i class="fa-brands fa-whatsapp"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

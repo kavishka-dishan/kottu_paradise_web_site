@@ -1,0 +1,132 @@
+
+/* login and signup */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(127, 21, 21);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom-style:solid;
+    border-width: 2px;
+    box-shadow: #ff8c1a;
+    border-color: #ff8c1a; 
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: 'VineFont', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.brand_logo{
+    width: 70px;
+    height: 68px;
+    margin-left: 10px;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+    transition: color 0.3s ease;
+    font-size:larger;
+    font-weight: bolder;
+    background: #ff8c1a;
+    padding: 9px 15px;
+    border-radius: 23px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(169, 249, 77, 0.3);
+
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background:#ff8c1a;
+    color: darkred;
+    box-shadow: 0 8px 20px rgba(212, 203, 75, 0.5);
+    transform: scale(1.05);
+}
+
+.auth-buttons button:hover {
+    background: linear-gradient(45deg, #f94d94, #ff6b6b);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(249, 77, 148, 0.5);
+}
+
+.cart-btn {
+    background: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.cart-btn:hover {
+    transform: scale(1.05);
+}
+
+#cart-count {
+    background: #ff4757;
+    color:  rgba(255, 255, 255, 0.95);
+    padding: 0.2rem 0.6rem;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+}

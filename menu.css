@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+
+.menu-container {
+    margin-top: 60px;
+    padding: 2rem;
+}
+
+.menu-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2d3436;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 1.5rem;
+}
+
+.item-info h3 {
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+}
+
+.item-info p {
+    color: #636e72;
+    margin-bottom: 1rem;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ff4757;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.item-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.add-to-cart, .view-details {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    transition: transform 0.2s;
+}
+
+.add-to-cart {
+    background: #ff4757;
+    color: white;
+}
+
+.view-details {
+    background: #f1f2f6;
+    color: #2d3436;
+}
+
+.add-to-cart:hover, .view-details:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #636e72;
+}
+
+.cart-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: #f1f2f6;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab-btn.active {
+    background: #ff4757;
+    color: white;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #f1f2f6;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    padding: 0.5rem;
+    border: none;
+    background: #ff4757;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.quantity-btn remove {
+    font-weight: bold;
+}
+
+#order-form-element {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#order-form-element input,
+#order-form-element select {
+    padding: 0.8rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    background: #ff4757;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.back-btn {
+    background:#636e72;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00b894;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cart-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}

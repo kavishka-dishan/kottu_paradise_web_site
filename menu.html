@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../kottu_paradise_logo.png" sizes="20x20 40x40 55x55" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Kottu Shop Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="../kottu_paradise_logo.png" alt="logo" class="brand_logo">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="cart-btn" onclick="openCart()">
+           <h1>🛒 Cart <span id="cart-count">0</span></h1>
+        </button>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="menu-container">
+        <h1>Our Menu</h1>
+        <div class="menu-grid" id="menu-items"></div>
+    </main>
+
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <div class="cart-tabs">
+                <button class="tab-btn active" onclick="showTab('checkout')">Checkout</button>
+                <button class="tab-btn" onclick="showTab('order-form')">Order Form</button>
+            </div>
+            
+            <div id="checkout" class="tab-content">
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <h3>Total: $<span id="cart-total">0</span></h3>
+                </div>
+            </div>
+
+            <div id="order-form" class="tab-content" style="display: none;">
+                <h2>Order Details</h2>
+                <form id="order-form-element" action="submit_order.php" method="POST">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="address" placeholder="Delivery Address" required>
+                    <select name="delivery" required>
+                        <option value="">Select Delivery Option</option>
+                        <option value="standard">Standard Delivery ($5)</option>
+                        <option value="express">Express Delivery ($10)</option>
+                        <option value="pickup">Pickup (Free)</option>
+                    </select>
+                    <input type="hidden" name="total_amount" id="hidden-total-amount">
+                    <input type="hidden" name="order_items" id="hidden-order-items">
+                    <button type="submit" class="submit-btn">Place Order</button>
+                </form>
+                <button class="back-btn" onclick="showTab('checkout')">Back to Cart</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Item Details Modal -->
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <div id="item-details"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 1970 Kottu Paradise. All rights reserved.</p>
+            <p><img src="../kottu_paradise_logo.png" alt="logo" class="logo_footer">
+                <a href="#" class="social-icon facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon whatsp"><i class="fa-brands fa-whatsapp"></i></a>
+            </p>
+        </div>
+    </footer>    
+
+    <script src="menu.js"></script>
+    <script src="navbar.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
